@@ -24,7 +24,3 @@ Project Start Date: 31/03/2024
 
 ## Credits
 ["Luxury Mansion"](https://skfb.ly/oBJrP) by Home Design 3D is licensed under CC Attribution-NonCommercial-ShareAlike (http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-["Tree Animate"](https://skfb.ly/oy78T) by TechArtBGN is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
-
-["Stylized Tree"](https://skfb.ly/opZM8) by yonimantz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
