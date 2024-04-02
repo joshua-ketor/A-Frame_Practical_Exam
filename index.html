@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical Exam</title>
     <script src="script/aframe.js"></script>
+    <script src="script/aframe-extras.min.js"></script>
+    <script src="script/ada-water.js"></script>
 </head>
 <body>
     <a-scene>
@@ -18,14 +20,15 @@
             <a-asset-item id="astonmartin"
             src="models/aston_martin_db11/scene.gltf"
             ></a-asset-item>
+            <a-asset-item id="oldman"
+            src="models/oldman_ernest/scene.gltf"></a-asset-item>
             <img src="texture/clear-sunny-sky.jpg" id="sky" crossorigin="anonymous">
-            <img id="ground" src="texture/TexturesCom_MetalBare0173_3_S.jpg">
-            <img id="floor" src="texture/TCom_Pavement_CobblestoneMedieval10_header.jpg">
+            <img id="grass" src="texture/grass.jpg">
         </a-assets>
 
         <!-- Camera -->
         <a-camera
-        position="0 25 40"
+        position="0 15 40"
         ></a-camera>
 
         <!-- Sky -->
@@ -36,11 +39,11 @@
         <!-- Floor -->
         <a-plane
         side="double"
-        src="#floor"
+        src="#grass"
         scale="500 500"
         rotation="-90 0 0"
         repeat="100 100 100"
-        position="0 9 0"
+        position="0 8 0"
         ></a-plane>
 
         <a-entity
@@ -56,19 +59,28 @@
         side="double"
         ></a-plane>
         
-        <!-- Ground -->
-        <a-plane
-        side="double"
-        src="#ground"
-        scale="50 50"
-        rotation="-90 0 0"
-        repeat="10 10"
-        position="0 -0.4 -20"
-        ></a-plane>
 
+        <a-light type="ambient" color="#ffffff" intensity="1" position="0 100 10"></a-light>
+        
         <!-- House -->
         <a-entity gltf-model="#house"
         ></a-entity>
+
+        <!-- Old man -->
+        <a-entity gltf-model="#oldman"
+        position="-1.7 0 -3"
+        animation-mixer
+        ></a-entity>
+
+        <!-- Water -->
+        <a-water
+        position="1 0 -29.6"
+        color="aqua"
+        side="double"
+        length="4.5"
+        width="12"
+
+        ></a-water>
 
         <!-- F1 Car -->
         <a-entity gltf-model="#f1car"
