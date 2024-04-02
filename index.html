@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Exam</title>
+    <script src="script/aframe.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="house"
+            src="models/luxury_mansion/scene.gltf"
+            ></a-asset-item>
+            <a-asset-item id="f1car"
+            src="models/mclaren_mcl60_f1_2023/scene.gltf"
+            ></a-asset-item>
+            <a-asset-item id="astonmartin"
+            src="models/aston_martin_db11/scene.gltf"
+            ></a-asset-item>
+            <img src="texture/clear-sunny-sky.jpg" id="sky" crossorigin="anonymous">
+            <img id="ground" src="texture/TexturesCom_MetalBare0173_3_S.jpg">
+            <img id="floor" src="texture/TCom_Pavement_CobblestoneMedieval10_header.jpg">
+        </a-assets>
+
+        <!-- Camera -->
+        <a-camera
+        position="0 25 40"
+        ></a-camera>
+
+        <!-- Sky -->
+        <a-sky src="#sky"></a-sky>
+
+
+
+        <!-- Floor -->
+        <a-plane
+        side="double"
+        src="#floor"
+        scale="500 500"
+        rotation="-90 0 0"
+        repeat="100 100 100"
+        position="0 9 0"
+        ></a-plane>
+
+        <a-entity
+        position="0 10 20"
+        >
+
+
+        <!-- Roofing -->
+        <a-plane color="#EEEEEE"
+        rotation="-90 0 0"
+        position="1.3 5.7 -10"
+        scale="16 15"
+        side="double"
+        ></a-plane>
+        
+        <!-- Ground -->
+        <a-plane
+        side="double"
+        src="#ground"
+        scale="50 50"
+        rotation="-90 0 0"
+        repeat="10 10"
+        position="0 -0.4 -20"
+        ></a-plane>
+
+        <!-- House -->
+        <a-entity gltf-model="#house"
+        ></a-entity>
+
+        <!-- F1 Car -->
+        <a-entity gltf-model="#f1car"
+        position="4 0 -0.5"
+        ></a-entity>
+
+        <!-- Aston Martin -->
+        <a-entity gltf-model="#astonmartin"
+        position="8 0 -0.3"
+        ></a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+</html>
